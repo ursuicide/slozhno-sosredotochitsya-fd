@@ -2,4 +2,335 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bg-page);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--main-color);
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+}
+
+.header {
+  block-size: 100vh;
+  min-block-size: 668px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  padding: 10px 0 10px 0;
+  margin-block-end: 40px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  color: var(--accent-color);
+  font-family: var(--main-font);
+  font-weight: var(--font-regular);
+  font-size: var(--font-size-regular);
+  border: none;
+  text-transform: lowercase;
+  padding: 1px 10px 3px 13px;
+  letter-spacing: 0.1em;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
+.header__theme-menu-button:disabled {
+  outline: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:hover:enabled {
+  outline: 1px solid #ff007066;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  font-family: var(--main-font);
+  font-weight: var(--font-bold);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 83%;
+  letter-spacing: 0.05em;
+}
+
+.header__description {
+  color: var(--main-color);
+  font-size: var(--font-size-regular);
+  font-family: var(--main-font);
+  font-weight: var(--font-bold);
+  line-height: 23.4px;
+}
+
+.title__decor {
+  background-color: var(--accent-color);
+}
+
+.decoration {
+  position: absolute;
+  color: var(--accent-color);
+  font-family: var(--main-font);
+  font-weight: var(--font-regular);
+  font-size: var(--font-size-regular);
+  top: 13px;
+  right: 25px;
+}
+
+.decoration::after {
+  content: "";
+  background-image: url(../images/Ellipse\ 4.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  block-size: 21px;
+  inline-size: 21px;
+  position: absolute;
+  left: 39px;
+}
+
+.decorated-zone::before {
+  content: "";
+  background-image: url(../images/border-top-right.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  block-size: 25px;
+  inline-size: 25px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.decorated-zone::after {
+  content: "";
+  background-image: url(../images/border-bottom-left.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  block-size: 25px;
+  inline-size: 25px;
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section__title {
+  color: var(--accent-color);
+  font-family: var(--main-font);
+  font-weight: var(--font-bold);
+  font-size: var(--font-size-regular);
+}
+
+.article__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article__title {
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-weight: var(--font-bold);
+  font-size: var(--font-size-regular);
+}
+
+.article__description {
+  color: var(--paragraph-color);
+  font-family: var(--main-font);
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-regular);
+  margin-block-start: 10px;
+  line-height: 23.4px;
+}
+
+.text__link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.text__link:hover {
+  border-block-end: 1px solid #ffff;
+}
+
+.text__link:focus-visible {
+  outline: 1px solid #ffff;
+}
+
+.alt__title {
+  font-weight: var(--font-regular);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, min-content);
+  gap: 10px;
+}
+
+.gallery__image {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 100vh;
+  min-block-size: 668px;
+  margin-block-start: 40px;
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  font-family: var(--main-font);
+  font-weight: var(--font-bold);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  line-height: 83%;
+  letter-spacing: 0.05em;
+}
+
+@media (width >= 768px) {
+  .page {
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+  }
+
+  .header {
+    margin-block-end: 60px;
+    padding: 20px 0 20px 0;
+  }
+
+  .decoration {
+    top: 25px;
+    right: 26px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+  }
+
+  .header__title {
+    justify-self: start;
+    margin-inline-start: -20px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__description {
+    justify-self: end;
+    width: 364px;
+  }
+
+  .main {
+    gap: 80px;
+  }
+
+  .section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .article__list {
+    grid-column: 2/4;
+  }
+
+  .section__alt {
+    display: flex;
+  }
+
+  .section:last-of-type {
+    display: block;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    gap: 20px;
+    margin-block-start: 20px;
+  }
+
+  .image__sunset {
+    grid-column: 1/3;
+  }
+
+  .image__street {
+    grid-column: 2/4;
+  }
+
+  .image__ice-cream {
+    grid-row: 1/3;
+    grid-column: 3;
+    object-fit: cover;
+  }
+
+  .image__tape {
+    grid-row: 2/4;
+    object-fit: cover;
+  }
+
+  .footer {
+    margin-block-start: 60px;
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (width >= 1024px) {
+  .header__description {
+    width: 491px;
+  }
+
+  .header__theme-menu {
+    justify-self: unset;
+    align-self: self-start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .list__alt {
+    flex-direction: row;
+  }
 }

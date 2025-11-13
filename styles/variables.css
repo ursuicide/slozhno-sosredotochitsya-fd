@@ -2,3 +2,14 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --main-font: "IBMPlexMono", sans-serif;
+  --font-bold: 700;
+  --font-regular: 400;
+  --font-size-regular: 18px;
+  --bg-page: url("../images/cover-image-dark.png");
+  --accent-color: #ff0070;
+  --main-color: #000028;
+  --paragraph-color: #f1b2ce;
+  --title-color: #db00ff;
+}
