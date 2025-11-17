@@ -16,11 +16,35 @@
   --paragraph-color: #f1b2ce;
   --title-color: #db00ff;
 
-  .header .decoration {
+  .decoration {
     display: block;
   }
 
   .main .section__title {
     color: var(--accent-color);
   }
+
+   .decorated-zone::before {
+    background-image: url(../images/dark-border-top-right.png);
+  }
+
+  .decorated-zone::after {
+    background-image: url(../images/dark-border-bottom-left.png);
+  }
+
+  .header__theme-menu-button {
+    color: var(--accent-color);
+  }
+
+  .header__theme-menu-button:disabled {
+    outline: 1px solid var(--accent-color);
+  }
+
+  .header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:hover:enabled {
+  outline: 1px solid  #ff007066;
+}
 }
