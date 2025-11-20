@@ -143,6 +143,10 @@
   gap: 20px;
 }
 
+.section:last-of-type {
+  gap: 10px;
+}
+
 .section__title {
   color: var(--accent-color);
   font-family: var(--main-font);
@@ -262,8 +266,12 @@
 
   .section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1.9fr;
     grid-template-rows: 1fr;
+  }
+
+  .section__title {
+    max-width: 236px;
   }
 
   .article__list {
@@ -330,5 +338,13 @@
   .list__alt {
     display: grid;
     grid-template-columns: repeat(3,1fr);
+  }
+
+  .section {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .section__title {
+    max-width: 315px;
   }
 }
